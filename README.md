@@ -11,7 +11,7 @@ A simple note-taking application built with React, Tailwind CSS, and Vite. This 
 - **Input Validation**: Validates title input to ensure the length does not exceed 50 characters.
 - **Design**: Utilizes Tailwind CSS for basic styling. The design is currently simple and may not be fully responsive across all screen sizes.
 - **Empty State Message**: Displays a message when no notes are available in the list.
-- **Archive Note**: Implementing a feature to archive notes.
+- **Archive Note**: Implementing a feature to archive notes. Archived notes will be hidden from the main view but accessible through a separate archive section.
 - **Props Validation**: Using PropTypes to ensure props received by the component are validated correctly.
 
 ## Ongoing Features
