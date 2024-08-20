@@ -10,16 +10,16 @@ export default function NotesList({
   return (
     <>
       <span className="text-white font-bold text-2xl pl-3">
-        {listType === "archive"
-          ? "Daftar Catatan Arsip"
-          : "Daftar Catatan Aktif"}
+        {listType === "active"
+          ? "Daftar Catatan Aktif"
+          : "Daftar Catatan Arsip"}
       </span>
       <div className="flex flex-wrap justify-center mt-5">
         {notes.length === 0 ? (
           <p className="text-white">
-            {listType === "archive"
-              ? "Belum ada catatan arsip."
-              : "Belum ada catatan aktif, silahkan tambah catatan baru."}
+            {listType === "active"
+              ? "Belum ada catatan aktif, silahkan tambah catatan baru."
+              : "Belum ada catatan arsip."}
           </p>
         ) : (
           notes.map((note) => (

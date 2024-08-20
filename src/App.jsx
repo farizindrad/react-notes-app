@@ -1,7 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, act } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import { getAllNotes, deleteNote } from "./utils/data";
+import {
+  getAllNotes,
+  deleteNote,
+  getActiveNotes,
+  getArchivedNotes,
+} from "./utils/data";
 import NotFound from "./pages/NotFound";
 import DetailNote from "./pages/DetailNote";
 
@@ -30,6 +35,9 @@ function App() {
     console.log(1);
   };
 
+  const activeNotes = getActiveNotes(notes);
+  const archivedNotes = getArchivedNotes(notes);
+
   return (
     <>
       <Router>
@@ -38,10 +46,23 @@ function App() {
             path="/"
             element={
               <Homepage
-                notes={notes}
+                notes={activeNotes}
                 handleAddNote={handleAddNote}
                 handleDelete={handleDelete}
                 handleArchive={handleArchive}
+                listType="active"
+              />
+            }
+          />
+          <Route
+            path="/archive"
+            element={
+              <Homepage
+                notes={archivedNotes}
+                handleAddNote={handleAddNote}
+                handleDelete={handleDelete}
+                handleArchive={handleArchive}
+                listType="archive"
               />
             }
           />
