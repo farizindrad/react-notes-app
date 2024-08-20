@@ -13,6 +13,7 @@ A simple note-taking application built with React, Tailwind CSS, and Vite. This 
 - **Empty State Message**: Displays a message when no notes are available in the list.
 - **Archive Note**: Implementing a feature to archive notes. Archived notes will be hidden from the main view but accessible through a separate archive section.
 - **Props Validation**: Using PropTypes to ensure props received by the component are validated correctly.
+- **View Note Details**: Users can view the detailed information of a selected note, including the title, creation date, and body. Provides a button to navigate back and options to delete or archive the note directly from the detail view.
 
 ## Ongoing Features
 
